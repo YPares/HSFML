@@ -1,0 +1,95 @@
+Cabal-Version:  >= 1.2
+Build-Type:     Simple
+Tested-With:    GHC
+Category:       Graphics, Game
+Name:           SFML
+Version:        1.5
+Stability:      experimental
+License:        MIT
+-- Licence-File:
+Copyright:     (c) 2010 Yves Parès
+Author:        Yves Parès <limestrael@gmail.com>
+Maintainer:    Yves Parès <limestrael@gmail.com>
+Synopsis:      A binding to the SFML library
+Description:
+    SFML is originally intended to be the object-oriented couterpart of SDL.
+    It provides high and low level access to graphics, windowing, input, audio, etc.
+    HSFML is licensed under the zlib/png license (like SFML itself).
+
+Library
+    Hs-Source-Dirs:     hs_src
+    Exposed-Modules:    SFML.Utils
+                        SFML.Direct.System
+                        SFML.Direct.Window
+                        SFML.Direct.Graphics
+
+    Other-Modules:      SFML.Direct.Classes.Convertible_HS_C
+                        SFML.Direct.Classes.Drawable
+                        SFML.Direct.Classes.Handling
+                        SFML.Direct.Classes.WindowClass
+
+                        SFML.Direct.Types.Clock
+                        SFML.Direct.Types.Color 
+                        SFML.Direct.Types.Enums 
+                        SFML.Direct.Types.Event 
+                        SFML.Direct.Types.Font 
+                        SFML.Direct.Types.Image 
+                        SFML.Direct.Types.Input 
+                        SFML.Direct.Types.PostFX 
+                        SFML.Direct.Types.Rect 
+                        SFML.Direct.Types.RenderWindow 
+                        SFML.Direct.Types.SfInts 
+                        SFML.Direct.Types.Shape 
+                        SFML.Direct.Types.Sprite 
+                        SFML.Direct.Types.Text 
+                        SFML.Direct.Types.VideoMode 
+                        SFML.Direct.Types.View 
+
+                        SFML.Direct.CImport.Clock
+                        SFML.Direct.CImport.Color
+                        SFML.Direct.CImport.Event
+                        SFML.Direct.CImport.Font
+                        SFML.Direct.CImport.Image
+                        SFML.Direct.CImport.Input
+                        SFML.Direct.CImport.PostFX
+                        SFML.Direct.CImport.Randomizer
+                        SFML.Direct.CImport.Rect
+                        SFML.Direct.CImport.RenderWindow
+                        SFML.Direct.CImport.Shape
+                        SFML.Direct.CImport.Sleep
+                        SFML.Direct.CImport.Sprite
+                        SFML.Direct.CImport.Text
+                        SFML.Direct.CImport.VideoMode
+                        SFML.Direct.CImport.View
+
+                        SFML.Direct.System.Clock
+                        SFML.Direct.System.Randomizer
+                        SFML.Direct.System.Sleep
+
+                        SFML.Direct.Window.Input
+                        SFML.Direct.Window.VideoMode
+
+                        SFML.Direct.Graphics.Color
+                        SFML.Direct.Graphics.Font
+                        SFML.Direct.Graphics.Image
+                        SFML.Direct.Graphics.PostFX
+                        SFML.Direct.Graphics.Rect
+                        SFML.Direct.Graphics.RenderWindow
+                        SFML.Direct.Graphics.Shape
+                        SFML.Direct.Graphics.Sprite
+                        SFML.Direct.Graphics.Text
+                        SFML.Direct.Graphics.View
+                        
+    Build-Depends:      base >= 4, utf8-string, bytestring, mtl,
+                        MissingH, containers
+    Include-Dirs:       c_src
+    -- | useless ?
+    Includes:           Wrappers.h
+    C-Sources:          c_src/Wrappers.c
+    Extra-Libraries:    csfml-system, csfml-window, csfml-graphics
+    Build-Tools:        hsc2hs
+
+--Executable testHSFML
+--    Hs-Source-Dirs:     hs_src, hs_src/demo
+--    Main-Is:            demo.hs
+
