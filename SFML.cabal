@@ -81,7 +81,8 @@ Library
                         SFML.Direct.Graphics.View
                         
     Build-Depends:      base >= 4, utf8-string, bytestring, mtl,
-                        MissingH, containers
+                        --MissingH,
+                        containers
     Include-Dirs:       c_src
     -- | useless ?
     Includes:           Wrappers.h
