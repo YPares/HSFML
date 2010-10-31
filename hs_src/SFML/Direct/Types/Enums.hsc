@@ -4,7 +4,6 @@ module SFML.Direct.Types.Enums where
 
 import Foreign.C.Types
 import qualified Data.Map as M
-import qualified Data.Map.Utils as M
 import Control.Monad.Identity
 
 import SFML.Direct.Classes.Convertible_HS_C

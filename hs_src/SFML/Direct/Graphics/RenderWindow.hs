@@ -7,7 +7,6 @@ import Foreign.C.Types
 import Foreign.C.String
 import Control.Monad.Identity
 import qualified Data.Map as M
-import qualified Data.Map.Utils as M
 import qualified Data.Foldable as F
 
 import SFML.Direct.CImport.RenderWindow
